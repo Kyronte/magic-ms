@@ -10,8 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class CardDTO {
-    private String id;
+    private String multiverseId;
     private String name;
-    private Supertype[] supertypes;
-    private Subtype[] subtypes;
 }
