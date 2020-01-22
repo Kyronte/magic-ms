@@ -13,4 +13,13 @@ public class CardServiceImpl implements CardService {
                 .multiverseId("205065")
                 .build();
     }
+
+    @Override
+    public CardDTO updateCardById(String cardId) {
+        return CardDTO.builder()
+                .name("Ajani's Pridemate")
+                .multiverseId("205065")
+                .build();
+    }
+
 }

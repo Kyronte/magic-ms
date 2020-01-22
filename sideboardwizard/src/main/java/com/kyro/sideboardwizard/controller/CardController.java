@@ -16,10 +16,8 @@ public class CardController {
         this.cardService = cardService;
     }
 
-
-
     @GetMapping("/{cardId}")
-    public ResponseEntity<CardDTO> getCard(@PathVariable("cardId") String cardId) {
+    public ResponseEntity<CardDTO> getCardById(@PathVariable("cardId") String cardId) {
         return new ResponseEntity<>(cardService.getCardById(cardId), HttpStatus.OK);
     }
 
@@ -30,9 +28,8 @@ public class CardController {
     }
 
     @PutMapping("/{cardId}")
-    public ResponseEntity updateCardById(@PathVariable("cardId") CardDTO cardId, @RequestBody CardDTO cardDTO) {
-        //todo missing implementation
-        return new ResponseEntity(HttpStatus.NO_CONTENT);
+    public ResponseEntity updateCardById(@PathVariable("cardId") String cardId, @RequestBody CardDTO cardDTO) {
+        return new ResponseEntity<>(cardService.updateCardById(cardId), HttpStatus.NO_CONTENT);
     }
 
 }
